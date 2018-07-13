@@ -12,20 +12,15 @@
     Hello, World!
 <!--     <iframe src="https://kdportfolio.000webhostapp.com/test.html?"></iframe> -->
     <script>
-      function getTvcCookie(){
-        var tvcCookies = document.cookie.split(';');
-        var cookieValue = '';
-        for(var  i = 0; i < tvcCookies.length; i++){
-          if(tvcCookies[i].split('=')[0] == 'tvc_universalCookie')
-            cookieValue = tvcCookies[i].split('=')[1];
-        }
-        return cookieValue;
+      var TVCgetCookie = function (cname) {
+      var result;
+      return (result = new RegExp('(?:^|; )' + encodeURIComponent(cname) + '=([^;]*)').exec(document.cookie)) ? decodeURIComponent(result[1]) : null;
       }
       var iframe = document.createElement('iframe');
-      iframe.src = 'https://kdportfolio.000webhostapp.com/test.html?tvc_universalCookie='+getTvcCookie();
+      iframe.src = 'https://kdportfolio.000webhostapp.com/test.html?tvc_universalCookie='+TVCgetCookie('tvc_universalCookie');
       document.body.appendChild(iframe);
       console.log('testing');
-      console.log(getTvcCookie());
+      console.log(TVCgetCookie('tvc_universalCookie'));
     </script>
     
   </body>
