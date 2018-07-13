@@ -1,0 +1,27 @@
+<html>
+  <head>
+  <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MS3JHQN');</script>
+  <!-- End Google Tag Manager -->
+  </head>
+  <body>
+    Hello, World!
+  </body>
+  <script>
+    try{
+      if (document.location.href.indexOf('tvc_universalCookie') !== -1) {
+        tvc_cookie_value = document.location.href.split ('?tvc_universalCookie=')[1];
+        if(!tvc_cookie_value.length || tvc_cookie_value=="undefined" || tvc_cookie_value=="null"){}
+      else{
+        tvc_cookie(tvc_cookie_value);
+        }
+      }
+     }catch(err){
+      console.log(err);
+     }
+  </script>
+</html>
