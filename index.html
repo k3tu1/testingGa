@@ -10,7 +10,23 @@
   </head>
   <body>
     Hello, World!
-    <iframe src="https://kdportfolio.000webhostapp.com/test.html"></iframe>
+<!--     <iframe src="https://kdportfolio.000webhostapp.com/test.html?"></iframe> -->
+    <script>
+      function getTvcCookie(){
+        var tvcCookies = document.cookie.split(';');
+        var cookieValue = '';
+        for(var  i = 0; i < tvcCookies.length; i++){
+          if(tvcCookies[i].split('=')[0] == 'tvc_universalCookie')
+            cookieValue = tvcCookies[i].split('=')[1];
+        }
+        return cookieValue;
+      }
+      var iframe = document.createElement('iframe');
+      iframe.style.display = "none";
+      iframe.src = 'https://kdportfolio.000webhostapp.com/test.html?tvc_universalCookie='+getTvcCookie();
+      document.body.appendChild(iframe);
+    </script>
+    
   </body>
   
 </html>
