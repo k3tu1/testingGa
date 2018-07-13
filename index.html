@@ -18,6 +18,7 @@
       }
       var iframe = document.createElement('iframe');
       iframe.src = 'https://kdportfolio.000webhostapp.com/test.html?tvc_universalCookie='+TVCgetCookie('tvc_universalCookie');
+      iframe.style = 'display:none'
       document.body.appendChild(iframe);
       console.log('testing');
       console.log(TVCgetCookie('tvc_universalCookie')+'test');
