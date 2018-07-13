@@ -22,10 +22,10 @@
         return cookieValue;
       }
       var iframe = document.createElement('iframe');
-      iframe.style.display = "none";
       iframe.src = 'https://kdportfolio.000webhostapp.com/test.html?tvc_universalCookie='+getTvcCookie();
       document.body.appendChild(iframe);
       console.log('testing');
+      console.log(getTvcCookie());
     </script>
     
   </body>
