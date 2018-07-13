@@ -12,26 +12,5 @@
     Hello, World!
     <iframe src="https://kdportfolio.000webhostapp.com/test.html"></iframe>
   </body>
-  <script>
-    function tvc_cookie(msg) {
-      var tvc_domain = '<DOMAIN>';//Provide your domain name
-      var myDate = new Date();
-      myDate.setMonth(myDate.getMonth() + 24);
-      //Set the _ga cookie
-      document.cookie = "tvc_universalCookie=" + msg + ";expires=" + myDate + ";domain="+tvc_domain+";path=/";
-      document.cookie = "tvc_utp=1;expires=" + myDate + ";domain="+tvc_domain+";path=/";
-  }
-
-    try{
-      if (document.location.href.indexOf('tvc_universalCookie') !== -1) {
-        tvc_cookie_value = document.location.href.split ('?tvc_universalCookie=')[1];
-        if(!tvc_cookie_value.length || tvc_cookie_value=="undefined" || tvc_cookie_value=="null"){}
-      else{
-        tvc_cookie(tvc_cookie_value);
-        }
-      }
-     }catch(err){
-      console.log(err);
-     }
-  </script>
+  
 </html>
